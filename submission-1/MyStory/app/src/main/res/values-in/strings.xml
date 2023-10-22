@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplikasi Cerita</string>
+    <string name="name">Nama</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="username_hint">Masukkan Nama Pengguna</string>
+    <string name="email_hint">Masukkan Email</string>
+    <string name="password_hint">Masukkan Kata Sandi</string>
+    <string name="sign_up">Daftar</string>
+    <string name="sign_in">Masuk</string>
+    <string name="sign_out">Keluar</string>
+    <string name="img_signIn">Gambar Halaman Masuk</string>
+    <string name="ask_account">Belum Punya Akun?</string>
+    <string name="have_account">Sudah Punya Akun?</string>
+    <string name="token">Token</string>
+    <string name="error_invalid_email">Alamat Email Tidak Valid</string>
+    <string name="error_field_required">Kolom Ini Wajib Diisi</string>
+    <string name="error_invalid_password">Kata sandi harus memiliki minimal 8 karakter</string>
+    <string name="detail_story">Detail Cerita</string>
+    <string name="upload">Unggah</string>
+    <string name="gallery">Galeri</string>
+    <string name="camera">Kamera</string>
+    <string name="permission_request_granted">Izin permintaan diberikan</string>
+    <string name="permission_request_denied">Izin permintaan ditolak</string>
+    <string name="no_media_selected">Tidak ada media terpilih</string>
+    <string name="failed_to_open_camera">Gagal memunculkan kamera</string>
+    <string name="failed_to_capture_image">Gagal mengambil gambar</string>
+    <string name="failed_upload_image">Gagal mengunggah gambar</string>
+    <string name="description">Deskripsi</string>
+</resources>
