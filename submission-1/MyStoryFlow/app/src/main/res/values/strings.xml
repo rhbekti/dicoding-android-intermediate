@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Story Flow</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+</resources>
