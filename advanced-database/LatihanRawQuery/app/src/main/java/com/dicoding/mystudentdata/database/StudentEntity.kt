@@ -8,14 +8,13 @@ data class Student(
     val studentId: Int,
     val name: String,
     val univId: Int,
-    @ColumnInfo(defaultValue = "false")
-    val graduate: Boolean? = false
 )
 
 @Entity
 data class University(
     @PrimaryKey
     val universityId: Int,
+    @ColumnInfo(name = "universityName")
     val name: String,
 )
 
@@ -34,7 +33,6 @@ data class StudentAndUniversity(
         parentColumn = "univId",
         entityColumn = "universityId"
     )
-
     val university: University? = null
 )
 
@@ -46,15 +44,14 @@ data class UniversityAndStudent(
         parentColumn = "universityId",
         entityColumn = "univId"
     )
-
     val student: List<Student>
 )
 
-@Entity(primaryKeys = ["sId","cId"])
+@Entity(primaryKeys = ["sId", "cId"])
 data class CourseStudentCrossRef(
     val sId: Int,
     @ColumnInfo(index = true)
-    val cId: Int
+    val cId: Int,
 )
 
 data class StudentWithCourse(
@@ -71,6 +68,5 @@ data class StudentWithCourse(
             entityColumn = "cId"
         )
     )
-
     val course: List<Course>
 )
