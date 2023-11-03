@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.uploads.AddStoryActivity">
+
+    <ImageView
+        android:id="@+id/previewImageView"
+        android:layout_width="@dimen/_0"
+        android:layout_height="@dimen/_0"
+        android:contentDescription="@string/add_image_story"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_16"
+        android:layout_marginHorizontal="@dimen/_16"
+        app:layout_constraintBottom_toTopOf="@id/galleryButton"
+        app:srcCompat="@drawable/baseline_image_24"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/galleryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16"
+        android:scaleType="fitCenter"
+        android:text="@string/gallery"
+        app:layout_constraintEnd_toStartOf="@id/cameraButton"
+        app:layout_constraintTop_toBottomOf="@id/previewImageView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16"
+        android:text="@string/camera"
+        app:layout_constraintTop_toBottomOf="@id/previewImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/galleryButton"/>
+
+    <com.rhbekti.storyapp.ui.customviews.DefaultTextField
+        android:id="@+id/edt_description"
+        android:layout_width="@dimen/_0"
+        android:layout_height="wrap_content"
+        android:hint="@string/description"
+        app:layout_constraintTop_toBottomOf="@id/galleryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cb_location"
+        android:autofillHints="@string/description"
+        android:layout_marginHorizontal="@dimen/_16"
+        android:layout_marginVertical="@dimen/_16" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cb_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_location"
+        app:layout_constraintTop_toBottomOf="@id/edt_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginHorizontal="@dimen/_16"
+        app:layout_constraintBottom_toTopOf="@id/uploadButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/uploadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_48"
+        android:paddingHorizontal="@dimen/_64"
+        android:text="@string/upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
